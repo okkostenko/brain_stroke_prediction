@@ -1,0 +1,191 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+/* typography styles */
+h1, h2, h4, label, #msg{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color:#ffffff;
+}
+
+h1{
+    font-size: 36;
+}
+
+h2{
+    font-size: 24;
+}
+
+h4{
+    font-size: 20;
+    font-weight: 500;
+    color:#6594ea;
+    width:80%;
+}
+
+label{
+    font-size: 18;
+    font-weight: 400;
+    color:#6594ea;
+    margin-right: 100%;
+    white-space:nowrap;
+    width:100%;
+    display:flex;
+    align-items: center;
+    
+}
+/* body styles */
+body{
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+}
+
+/* containers styles */
+#app{
+    margin: 100px 150px 100px 100px;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    gap:30px;
+}
+
+#controls{
+    padding: 30px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+}
+
+#visualization{
+    background-color: #1f1f1f;
+    padding:30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 30px;
+    border-radius: 20px;
+    width:100%;
+}
+
+#prediction{
+    background-color: #1f1f1f;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width:100%;
+}
+
+/* Image styles */
+img{
+    width:100%;
+    margin-block: 24px;
+}
+
+/* dropbox styles */
+#age_graph, #bmi_graph, #work_type_graph, #smoking_status_graph{
+    background-color: #1f1f1f;
+}
+
+.bg{
+    background-color: #1f1f1f;
+}
+
+.Select-control, .is-open{
+    color:#ffffff;
+    background-color: #0a0a0a;
+    border:none;
+    border-bottom: 1px solid #6594ea;
+}
+
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label{
+    color:#ffffff;
+}
+
+.Select-menu-outer{
+    color:#ffffff;
+    background-color: #0a0a0a;
+    border:none;
+}
+
+.Select-menu-outer:hover{
+    color:#6594ea;
+}
+
+/* numder input styles */
+.input{
+    margin-bottom:8px;
+}
+
+input{
+    background-color: #0a0a0a;
+    color:#fff;
+    border:none;
+    border-bottom: 1px solid #6594ea;
+    margin-bottom: 24px;
+    height: 35px;
+    padding-left: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* radiobutton styles */
+input[type="radio"]{
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 8px;
+    background-color: #1f1f1f;
+    color:#fff;
+    border:1px solid #6594ea;
+    width:16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-items: center;
+}
+
+input[type="radio"]::after{
+    content:"";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 10px 10px #6594ea;
+    background-color: #6594ea;
+}
+
+input[type="radio"]:checked::after{
+    transform: scale(1);
+}
+
+#radiobutton label{
+    color:#fff;
+}
+
+/* Button styles */
+#submit{
+    font-size: 20px;
+    color:#fff;
+    background-color: #6594ea;
+    padding-block: 8px;
+    font-weight: 700;
+    margin-bottom: 36px;
+
+}
+
+/* Prediction result styles */
+#msg{
+    font-size: 36px;
+}
